@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>uw_ct_vio</name>
+  <version>0.1.0</version>
+  <description>Continuous-time stereo-inertial odometry for underwater robots (GTSAM fixed-lag smoother).</description>
+  <maintainer email="nevle.nehal@lionsbot.page">nevle.nehal</maintainer>
+  <license>BSD-3-Clause</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>rclcpp</depend>
+  <depend>rosbag2_cpp</depend>
+  <depend>geometry_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>yaml-cpp</depend>
+  <depend>libopencv-dev</depend>
+  <test_depend>ament_cmake_gtest</test_depend>
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

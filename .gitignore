@@ -1,0 +1,35 @@
+# Build trees and local dependency prefixes (rebuilt from source, see README)
+build*/
+log/
+deps/
+install/
+*.log
+!**/results/**/run.log
+
+# Third-party clones (fetched separately; several have non-commercial licences)
+third_party/
+
+# Large / regenerable outputs
+results/*
+!results/README.md
+!results/summary/
+sonar_cam/out/
+inspect_report/.venv/
+inspect_report/run_bus/keyframes/
+inspect_report/label_frames/
+gpu_frontend/results/*.uwtrk
+health/results/**/plot_data.npz
+*.db3
+*.mcap
+*.npz
+*.mp4
+*.uwtrk
+
+# Python / editor noise
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+cyclonedds.log
+health/manifest.json
+*.out
