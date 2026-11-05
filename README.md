@@ -6,6 +6,11 @@ turbid images), a continuous-time pressure-depth factor, and a **DVL body-veloci
 innovation-gate, re-lock and recovery logic so DVL dropouts (bottom-lock loss, water-column lock, spikes) do
 not corrupt the estimate. Offline runner `run_bag` replays ROS 2 bags. Research code; never run on a vehicle.
 
+![Top-down trajectory on traj_03: mocap ground truth, 20 s blackout without DVL and with simulated DVL](docs/figures/hero_trajectory.png)
+
+*traj_03 (NTNU underwater 2023, subset-3), x-y after hand-eye + SE3 alignment as in `scripts/evaluate.py`; thick
+segments mark the 20 s camera blackout. The DVL is simulated from mocap, so this shows the factor and gating, not real-sensor accuracy.*
+
 ## Results (NTNU underwater dataset 2023, 6 trajectories with mocap; mean ATE SE3 with hand-eye, RPE over 5 m)
 
 | Configuration | Mean ATE (m) | Mean RPE (%) | Worst traj (m) |
@@ -23,6 +28,31 @@ work; real-sensor accuracy needs a real DVL dataset (e.g. the Heriot-Watt Tank d
 bags: Basalt 1.10 m (in-air stereo extrinsic), SVIn 1.80 m, ORB-SLAM3 initialises on 3/6, OpenVINS 3/6.
 Details, design, as-built notes and the full table: `DESIGN_DVL.md`. Estimator history and ablations:
 `DESIGN_V2.md`, `DESIGN_PHASE2.md`.
+
+### Figures
+
+![Position error vs time on traj_03](docs/figures/error_vs_time.png)
+
+*Position error vs time on traj_03 (log scale). Errors are after the same global SE3 alignment that gives the reported ATE, so a
+late blackout drift also shows up as offset before it; the DVL-lost-for-7 s run is the purple curve. Simulated DVL.*
+
+![ATE per trajectory](docs/figures/ate_blackout_bars.png)
+
+*ATE per trajectory (log axis): baseline, 20 s blackout without DVL, and with simulated DVL. Values from the table above (`ntnu_all.tsv` of the benchmark runs). On traj_01 and traj_04 the DVL gives little or no gain.*
+
+![DVL dropout robustness](docs/figures/dvl_dropout_robustness.png)
+
+*Mean ATE per simulated DVL scenario with cameras normal; dots are the 6 trajectories. The means are not above DVL-off, but
+single trajectories can be slightly worse (worst 0.658 m vs 0.642 m).*
+
+![Simulated DVL example](docs/figures/simulated_dvl_example.png)
+
+*Example simulated DVL velocity (body frame, traj_02), periodic dropouts and outliers; samples exist only where mocap does. Outlier spikes are clipped to +-1.2 m/s.*
+
+Regenerate all figures (needs matplotlib, numpy and the run outputs; paths are for our machine):
+```bash
+python3 scripts/make_figures.py --data <uw_figdata> --mocap-root <results>/ws1_sync/mocap
+```
 
 ## Build
 
