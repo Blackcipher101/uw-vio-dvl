@@ -101,6 +101,6 @@ Licence: none yet (choose before publishing).
 ground truth. On the clear-water run (single runs), a 20 s camera blackout raises ATE from 0.30 m to 3.69 m without the DVL; with the DVL it is **0.32 m**.
 In turbid water vision-only diverges and the DVL keeps it at 4.23 m. Details and caveats are in [`sim/README.md`](sim/README.md).
 
-[![Stonefish camera blackout video](docs/media/blackout_clear_poster.jpg)](docs/media/blackout_clear.mp4)
+[![Stonefish camera blackout (animated)](docs/media/blackout_clear.gif)](docs/media/blackout_clear.mp4)
 
 *Video ([mp4](docs/media/blackout_clear.mp4)), with the estimates aligned on the pre-blackout segment only: during the 20 s blackout the vision-only error grows to 8.8 m, while with the DVL it stays under 0.5 m. Rendered by `sim/make_video.py`.*
