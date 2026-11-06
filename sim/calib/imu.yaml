@@ -1,0 +1,7 @@
+# synthetic IMU, Kalibr continuous-time noise model (sim/rig.py); rate 200 Hz
+accelerometer_noise_density: 0.002
+accelerometer_random_walk: 0.0003
+gyroscope_noise_density: 0.00017
+gyroscope_random_walk: 2e-05
+rostopic: /sim/imu
+update_rate: 200

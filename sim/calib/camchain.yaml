@@ -1,0 +1,21 @@
+cam0:
+  cam_overlaps: [1]
+  camera_model: pinhole
+  distortion_coeffs: [0.0, 0.0, 0.0, 0.0]
+  distortion_model: radtan
+  intrinsics: [429.031293, 429.031293, 359.5, 269.5]
+  resolution: [720, 540]
+  rostopic: /sim/cam0/compressed
+cam1:
+  T_cn_cnm1:
+    - [1, 0, 0, -0.12]
+    - [0, 1, 0, 0]
+    - [0, 0, 1, 0]
+    - [0, 0, 0, 1]
+  cam_overlaps: [0]
+  camera_model: pinhole
+  distortion_coeffs: [0.0, 0.0, 0.0, 0.0]
+  distortion_model: radtan
+  intrinsics: [429.031293, 429.031293, 359.5, 269.5]
+  resolution: [720, 540]
+  rostopic: /sim/cam1/compressed

@@ -1,0 +1,28 @@
+{
+ "duration_s": 329.76,
+ "record_s": 331.8,
+ "sim_rate_hz": 200.0,
+ "cam_rate_hz": 10.0,
+ "keypoint_rate_hz": 50.0,
+ "keypoint_sha256": "7ed211448be562c0996a5e6b4397ed91ba5552a8421c0cd3b90ff385594dffba",
+ "expected_dvl_lock_loss_s": {
+  "beams_45_135_225_315": [
+   [
+    88.2,
+    106.6
+   ]
+  ],
+  "beams_0_90_180_270": [
+   [
+    83.2,
+    85.2
+   ],
+   [
+    87.2,
+    108.8
+   ]
+  ]
+ },
+ "suggested_blackout": "195:20",
+ "blackout_note": "t0:dur [s after the first image], in the middle of leg 2 (DVL valid), 20 s"
+}

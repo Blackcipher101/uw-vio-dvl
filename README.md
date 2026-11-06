@@ -94,3 +94,9 @@ Real DVL data; the `--dvl-topic` reader; DVL extrinsic / scale / time-offset est
 An independent code review of the DVL change was started and not completed.
 
 Licence: none yet (choose before publishing).
+
+## Simulation
+
+`sim/` holds a Stonefish seabed benchmark with a physically simulated DVL (natural bottom-lock loss over a pit) and exact
+ground truth. On the clear-water run (single runs), a 20 s camera blackout raises ATE from 0.30 m to 3.69 m without the DVL; with the DVL it is **0.32 m**.
+In turbid water vision-only diverges and the DVL keeps it at 4.23 m. Details and caveats are in [`sim/README.md`](sim/README.md).
