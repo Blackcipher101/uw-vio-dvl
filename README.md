@@ -5,7 +5,7 @@ and re-lock logic keep DVL dropouts from corrupting the estimate. Research code;
 
 | 20 s camera blackout in Stonefish: vision-only vs with DVL | Top-down trajectory, NTNU traj_03 |
 |---|---|
-| [![Stonefish camera blackout](docs/media/blackout_clear.gif)](sim/README.md) | [![traj_03 trajectory](docs/figures/hero_trajectory.png)](docs/figures/hero_trajectory.png) |
+| [![Stonefish camera blackout](docs/media/blackout_clear.gif)](docs/media/blackout_clear.mp4) | [![traj_03 trajectory](docs/figures/hero_trajectory.png)](docs/figures/hero_trajectory.png) |
 | physically simulated DVL, single run, aligned on the pre-blackout segment: vision-only error grows to 8.8 m, with the DVL it stays under 0.5 m ([sim details](sim/README.md)) | mocap ground truth vs 20 s blackout without DVL and with simulated DVL |
 
 ## Results

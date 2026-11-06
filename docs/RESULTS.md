@@ -64,4 +64,4 @@ In turbid water vision-only diverges and the DVL keeps it at 4.23 m. Details and
 
 ![Stonefish camera blackout (animated)](media/blackout_clear.gif)
 
-*Video (the mp4 is not committed: `*.mp4` is git-ignored; `sim/make_video.py` renders it), with the estimates aligned on the pre-blackout segment only: during the 20 s blackout the vision-only error grows to 8.8 m, while with the DVL it stays under 0.5 m. Rendered by `sim/make_video.py`.*
+*Video ([mp4](media/blackout_clear.mp4)), with the estimates aligned on the pre-blackout segment only: during the 20 s blackout the vision-only error grows to 8.8 m, while with the DVL it stays under 0.5 m. Rendered by `sim/make_video.py`.*
